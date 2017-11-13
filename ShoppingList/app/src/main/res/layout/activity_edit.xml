@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/item_name"/>
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/description"
+        android:layout_below="@+id/etName"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/etPrice"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/price"
+        android:layout_below="@+id/etName"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="12dp"
+        android:inputType="numberDecimal"/>
+
+    <Spinner
+        android:id="@+id/dropDownList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/cbBoughtEdit"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/cbBoughtEdit" >
+
+
+    </Spinner>
+
+
+    <CheckBox
+        android:id="@+id/cbBoughtEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bought"
+        android:layout_alignBaseline="@+id/btnSave"
+        android:layout_alignBottom="@+id/btnSave"
+        android:layout_alignEnd="@+id/etDescription" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:layout_below="@+id/etPrice"
+        android:layout_alignEnd="@+id/etPrice" />
+
+</RelativeLayout>
